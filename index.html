@@ -17,13 +17,27 @@
 
 </head>
 
+
+
+<script>
+    function setupVideos() {
+        for (const video of document.querySelectorAll('video')) {
+            video.controls = false
+            video.addEventListener('mouseover', () => { video.controls = 'controls' })
+            video.addEventListener('mouseout', () => { video.controls = false })
+        }
+    }
+    window.addEventListener('load', setupVideos, false)
+</script>
+
+
 <body>
     <script src="./oneko.js"></script>
-    <div id="banner" class="crt" style="margin:0px auto 0px auto;
-    ">
+    <div id="banner" class="crt" style="margin:0px auto 0px auto;">
         gumi.lol
         <p class="subtext" id="banner-subtext">Dogshit clips</p>
     </div>
+
     <div class="content">
         <div class="gallery">
             <div class="video">
